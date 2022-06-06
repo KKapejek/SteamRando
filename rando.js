@@ -22,7 +22,7 @@ async function getSelectedGameInfo(appid){
     const url = `https://store.steampowered.com/api/appdetails?appids=${appid}`
     return await axios.get(url)
         .then(res => {
-            return res.data[id].data;
+            return res.data[appid].data;
         })
         .catch(err => console.log(err))
 }
